@@ -25,4 +25,9 @@ pipeline {
             }
         }
     }
+    post {
+        success {
+            build job: 'CD-Pipeline-Deploy', wait: false
+        }
+    }
 }
